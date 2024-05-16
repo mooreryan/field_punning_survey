@@ -6,6 +6,7 @@ A short survey of record field and function argument punning in different progra
 ### Contents
 
 * [Agda](#agda)
+* [Idris](#idris)
 * [Haskell](#haskell)
 * [JavaScript](#javascript)
 * [OCaml](#ocaml)
@@ -22,6 +23,15 @@ A short survey of record field and function argument punning in different progra
 ## Agda
 
 - [Hidden Argument Puns](https://agda.readthedocs.io/en/latest/language/syntactic-sugar.html#id5) (link to Agda docs)
+
+<!-- TOC --><a name="idris"></a>
+## Idris
+
+I'm not positive this is implemented in exactly this way but, there was a [proposal](https://github.com/idris-lang/Idris2/issues/626) for the following:
+
+> `Person.{name, age}` stands for `Person.{name=name, age=age}`
+
+It seems to have been implemented and merged in this [pull request](https://github.com/idris-lang/Idris2/pull/607).
 
 <!-- TOC --><a name="haskell"></a>
 ## Haskell
