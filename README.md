@@ -1,25 +1,22 @@
-<!-- TOC start -->
-
-- ["Punning" In Various Programming Languages](#punning-in-various-programming-languages)
-   * [Agda](#agda)
-   * [Haskell](#haskell)
-   * [JavaScript](#javascript)
-   * [OCaml](#ocaml)
-      + [Records](#records)
-      + [Function arguments](#function-arguments)
-   * [PureScript](#purescript)
-   * [Reason](#reason)
-   * [ReScript](#rescript)
-   * [Ruby](#ruby)
-   * [Rust](#rust)
-   * [License](#license)
-
-<!-- TOC end -->
-
 <!-- TOC --><a name="punning-in-various-programming-languages"></a>
 # "Punning" In Various Programming Languages
 
 A short survey of record field and function argument punning in different programming languages.
+
+### Contents
+
+* [Agda](#agda)
+* [Haskell](#haskell)
+* [JavaScript](#javascript)
+* [OCaml](#ocaml)
+  + [Records](#records)
+  + [Function arguments](#function-arguments)
+* [PureScript](#purescript)
+* [Reason](#reason)
+* [ReScript](#rescript)
+* [Ruby](#ruby)
+* [Rust](#rust)
+* [License](#license)
 
 <!-- TOC --><a name="agda"></a>
 ## Agda
