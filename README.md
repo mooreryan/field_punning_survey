@@ -35,9 +35,11 @@ A short survey of record field and function argument punning in different progra
 var x = 1
 var y = 2
 
+// Shorthand for { x: x, y: y }
 var point_a = { x, y }
 
 x *= 10
+// Shorthand for { ...point_a, x: x }
 var point_b = { ...point_a, x }
 ```
 
@@ -58,11 +60,13 @@ type point = { x : int; y : int}
 (* Constructing *)
 let point_a = 
   let x = 1 in let y = 2 in 
+  (* Shorthand for { x = x; y = y } *)
   { x; y }
 
 (* Updating *)
 let point_b =
   let x = 3 in 
+  (* Shorthand for { point_a with x = x } *)
   { point_a with x }
 ```
 
@@ -77,7 +81,10 @@ let subtract ~x ~y = x - y
 let x = 3
 let y = 2
 
-let a = subtract ~x ~y (* 1 *)1
+(* Shorthand for subtract ~x:x ~y:y *)
+let a = subtract ~x ~y (* 1 *)
+
+(* Shorthand for subtract ~y:y ~x:x *)
 let b = subtract ~y ~x (* also 1 *)
 ```
 
@@ -103,11 +110,13 @@ type point = {x: int, y: int}
 let point_a = {
   let x = 1
   let y = 2
+  // Shorthand for {x: x, y: y}
   {x, y}
 }
 
 let point_b = {
   let x = 3
+  // Shorthand for {...point_a, x: x}
   {...point_a, x}
 }
 ```
@@ -138,7 +147,9 @@ struct User {
 fn build_user(email: String, username: String) -> User {
     User {
         active: true,
+        // Shorthand for username: username
         username,
+        // Shorthand for email: email
         email,
         sign_in_count: 1,
     }
